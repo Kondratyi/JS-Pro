@@ -1,0 +1,46 @@
+html {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #ebdddd;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    &_cart_button {
+        height: 40px;
+        width: 100px;
+        border: 3px solid #ee80a163;
+        background-color: #ee80a163;
+        border-radius: 10px 10px 10px 10px;
+
+        &:hover {
+            background-color: #ebdddd;
+        }
+    }
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+
+    &_item {
+        text-align: center;
+    }
+
+    &_item_buy-btn {
+        height: 40px;
+        width: 100px;
+        border: 3px solid #ee80a163;
+        background-color: #ebdddd;
+        border-radius: 10px 10px 10px 10px;
+
+        &:hover {
+            background-color: #ee80a163;
+        }
+    }
+}
