@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <p class="text_1">
-        One: 'Hi Mary.' Two: 'Oh, hi.'
-        One: 'How are you doing?'
-        Two: 'I'm doing alright. How about you?'
-        One: 'Not too bad. The weather is great isn't it?'
-        Two: 'Yes. It's absolutely beautiful today.'
-        One: 'I wish it was like this more frequently.'
-        Two: 'Me too.'
-        One: 'So where are you going now?'
-        Two: 'I'm going to meet a friend of mine at the department store.'
-        One: 'Going to do a little shopping?'
-        Two: 'Yeah, I have to buy some presents for my parents.'
-        One: 'What's the occasion?'
-        Two: 'It's their anniversary.'
-        One: 'That's great. Well, you better get going. You don't want to be late.'
-        Two: 'I'll see you next time.'
-        One: 'Sure. Bye.'
-    </p>
-
-    <p class="text_2">
-        One: 'Hi Mary.' Two: 'Oh, hi.'
-        One: 'How are you doing?'
-        Two: 'I'm doing alright. How about you?'
-        One: 'Not too bad. The weather is great isn't it?'
-        Two: 'Yes. It's absolutely beautiful today.'
-        One: 'I wish it was like this more frequently.'
-        Two: 'Me too.'
-        One: 'So where are you going now?'
-        Two: 'I'm going to meet a friend of mine at the department store.'
-        One: 'Going to do a little shopping?'
-        Two: 'Yeah, I have to buy some presents for my parents.'
-        One: 'What's the occasion?'
-        Two: 'It's their anniversary.'
-        One: 'That's great. Well, you better get going. You don't want to be late.'
-        Two: 'I'll see you next time.'
-        One: 'Sure. Bye.'
-    </p>
-
-
-    <script>
-        //Задание 1
-        let str1 = document.querySelector('.text_1').innerText;
-        let regexp1 = /\'/g;
-        str1 = str1.replace(regexp1, '"');
-        document.querySelector('.text_1').innerHTML = str1;
-
-        //Задание 2
-        let str2 = document.querySelector('.text_2').innerText;
-        let regexp2 = /\B\'|\'\B/g;
-        str2 = str2.replace(regexp2, '"');
-        document.querySelector('.text_2').innerHTML = str2;
-
-    </script>
+<div id="app">
+    <header>
+        <div class="logo">E-shop</div>
+        <div class="cart">
+            <form action="#" class="search-form" @submit.prevent="filter">
+                <input type="text" class="search-field" v-model="userSearch">
+                <button class="btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="btn-cart" type="button" @click="show=!show" >Корзина</button>
+            <div class="cart-block" v-if="show"></div>
+        </div>
+    </header>
+    <main>
+        <div class="products">
+            <div class="product-item" v-for="product of filtered">
+                <img :src="imgCatalog" alt="Some img">
+                <div class="desc">
+                    <h3>{{product.product_name}}</h3>
+                    <p>{{product.price}} $</p>
+                    <button class="buy-btn" @click="addProduct(product)">Купить</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="products">
+            <div class="product-item" v-for="product of products" :key="product.id_product">
+                <img :src="imgCatalog" alt="Some img">
+                <div class="desc">
+                    <h3>{{product.product_name}}</h3>
+                    <p>{{product.price}} $</p>
+                    <button class="buy-btn" @click="addProduct(product)">Купить</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>
+
+<!--<div class="cart-item" data-id="${this.id_product}">-->
+    <!--<div class="product-bio">-->
+        <!--<img src="${this.img}" alt="Some image">-->
+        <!--<div class="product-desc">-->
+            <!--<p class="product-title">${this.product_name}</p>-->
+            <!--<p class="product-quantity">Quantity: ${this.quantity}</p>-->
+            <!--<p class="product-single-price">$${this.price} each</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="right-block">-->
+        <!--<p class="product-price">${this.quantity*this.price}</p>-->
+        <!--<button class="del-btn" data-id="${this.id_product}">&times;</button>-->
+    <!--</div>-->
+<!--</div>-->
