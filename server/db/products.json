@@ -1,22 +1,22 @@
 [
   {
-    "id_product": 124,
-    "product_name": "Keyboard",
-    "price": 1600
+    "id_product": 1,
+    "product_name": "Mango  People",
+    "price": 45
   },
   {
-    "id_product": 457,
-    "product_name": "Gamepad",
-    "price": 3000
+    "id_product": 2,
+    "product_name": "People  T-shirt",
+    "price": 34
   },
   {
-    "id_product": 123,
-    "product_name": "Ноутбук",
-    "price": 45600
+    "id_product": 3,
+    "product_name": "Mango  T-shirt",
+    "price": 56
   },
   {
-    "id_product": 456,
-    "product_name": "Мышка",
-    "price": 1000
+    "id_product": 4,
+    "product_name": "T-shirt",
+    "price": 87
   }
 ]

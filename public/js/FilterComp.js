@@ -11,3 +11,17 @@ Vue.component('filter-el', {
                 </button>
             </form>`
 })
+
+// Vue.component('filtered', {
+//     props: ['value'],
+//     template: `<input type="text" class="search-field"
+//                     v-bind:value="value"
+//                     v-on:input="$emit('input', $event.target.value)">`
+//
+// });
+//
+// Vue.component('error', {
+//     // props: ['notError'],
+//     template: `<div> ERROR - the request to the server was failed - ERROR </div>`
+//
+// });
