@@ -1,0 +1,22 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "Mango  People",
+    "price": 45
+  },
+  {
+    "id_product": 2,
+    "product_name": "People  T-shirt",
+    "price": 34
+  },
+  {
+    "id_product": 3,
+    "product_name": "Mango  T-shirt",
+    "price": 56
+  },
+  {
+    "id_product": 4,
+    "product_name": "T-shirt",
+    "price": 87
+  }
+]
